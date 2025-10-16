@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Scribble your writing!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: 'Poppins', sans-serif; background:#f5f5f5; color:#333; line-height:1.6; }
+    a { text-decoration:none; color:inherit; }
+    img { max-width:100%; display:block; }
+
+    header { background:white; padding:20px 40px; position:sticky; top:0; width:100%; z-index:100; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    nav { display:flex; justify-content:space-between; align-items:center; }
+    .nav-links { list-style:none; display:flex; gap:20px; }
+    .nav-links a { font-weight:500; color:#333; }
+
+    .hero { min-height:80vh; background:linear-gradient(135deg, #0099cc 0%, #0066cc 100%); color:white; display:flex; justify-content:center; align-items:center; text-align:center; }
+    .hero h1 { font-size:3rem; margin-bottom:20px; }
+    .hero p { font-size:1.2rem; }
+
+    section { padding:60px 20px; max-width:1000px; margin:0 auto; opacity:1; transform:translateY(0); transition: opacity 0.6s ease, transform 0.6s ease;}
+    #about, #projects, #contact { background:white; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); margin-bottom:40px; padding:30px; }
+
+    .projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+    .project-card { background:white; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); overflow:hidden; transition:transform 0.3s ease; }
+    .project-card:hover { transform:translateY(-5px); }
+    .project-card img { width:100%; height:160px; object-fit:cover; background:#ddd; }
+    .project-card-content { padding:15px; }
+    .project-card-content h3 { margin-bottom:10px; color:#0066cc; }
+    .project-card-content p { margin-bottom:15px; color:#555; }
+    .project-card-content a { display:inline-block; padding:8px 15px; background:#0066cc; color:white; border-radius:4px; transition: background-color 0.3s; }
+    .project-card-content a:hover { background:#005bb5; }
+
+    .contact-form { display:flex; flex-direction:column; gap:15px; }
+    .contact-form input, .contact-form textarea { width:100%; padding:12px; border:1px solid #ccc; border-radius:4px; font-family:Poppins,sans-serif; }
+    .contact-form button { width:150px; padding:12px; border:none; background:#0066cc; color:white; border-radius:4px; cursor:pointer; transition: background-color 0.3s; }
+    .contact-form button:hover { background:#005bb5; }
+
+    footer { text-align:center; padding:20px; color:#555; }
+
+    @media(max-width:600px){ .hero h1{ font-size:2.2rem; } .nav-links{ display:none; } }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo"><strong>Scribble your writing!</strong></div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+     
+    </ul>
+  </nav>
+</header>
+
+<section class="hero" id="hero">
+  <div>
+    <h1>Scribble your writing!</h1>
+    <p>Your hub for creative English tools and games</p>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About Scribbler Pro</h2>
+  <p>Scribbler Pro is a collection of English language and writing tools — games, quizzes, converters, and creative writing aids. Explore the projects below!</p>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <img alt="Story Burger Screenshot">
+      <div class="project-card-content">
+        <h3>Story Burger</h3>
+        <p>Build stories from random prompts.</p>
+        <a href="https://planomy.github.io/Story-Burger/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Quadruple Verbaliser Screenshot">
+      <div class="project-card-content">
+        <h3>Quadruple Verbaliser</h3>
+        <p>Enhance sentences with creative verbs.</p>
+        <a href="https://planomy.github.io/Quadruple-Verbaliser/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Author Starts Screenshot">
+      <div class="project-card-content">
+        <h3>Author Starts</h3>
+        <p>Get ideas to kickstart your stories.</p>
+        <a href="https://planomy.github.io/Author-Starts/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Word Slider Screenshot">
+      <div class="project-card-content">
+        <h3>Word Slider</h3>
+        <p>Slide words to form sentences creatively.</p>
+        <a href="https://planomy.github.io/Word-Slider/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Word Weaver Screenshot">
+      <div class="project-card-content">
+        <h3>Word Weaver</h3>
+        <p>Weave words together for creative writing.</p>
+        <a href="https://planomy.github.io/Word-Weaver/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="English Test II Screenshot">
+      <div class="project-card-content">
+        <h3>English Test II</h3>
+        <p>Practice your English skills with tests.</p>
+        <a href="https://planomy.github.io/English-Test-II/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Curriculum Error Lab Screenshot">
+      <div class="project-card-content">
+        <h3>Curriculum Error Lab</h3>
+        <p>Identify and fix English errors.</p>
+        <a href="https://planomy.github.io/Curriculum-Error-Lab/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="English Test I Screenshot">
+      <div class="project-card-content">
+        <h3>English Test I</h3>
+        <p>Test your knowledge with quizzes.</p>
+        <a href="https://planomy.github.io/English-Test-I/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="The Great Spelling Bee Screenshot">
+      <div class="project-card-content">
+        <h3>The Great Spelling Bee</h3>
+        <p>Fun spelling challenges and games.</p>
+        <a href="https://planomy.github.io/The-Great-Seplling-Bee/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Misspelling MasterⅡ">
+      <div class="project-card-content">
+        <h3>Misspelling Master</h3>
+        <p>Interactive spelling practice.</p>
+        <a href="https://planomy.github.io/Spellizabeth/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Tense Converter Screenshot">
+      <div class="project-card-content">
+        <h3>Tense Converter</h3>
+        <p>Convert sentences between tenses.</p>
+        <a href="https://planomy.github.io/Tense-Converter/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Spelliza Screenshot">
+      <div class="project-card-content">
+        <h3>Spelliza</h3>
+        <p>Fun spelling puzzles and exercises.</p>
+        <a href="https://planomy.github.io/Spelliza/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Sophisticated Sentence Builder Screenshot">
+      <div class="project-card-content">
+        <h3>Sophisticated Sentence Builder</h3>
+        <p>Create polished, advanced sentences.</p>
+        <a href="https://planomy.github.io/Sophisticated-Sentence-Builder/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Power Verbs Screenshot">
+      <div class="project-card-content">
+        <h3>Power Verbs</h3>
+        <p>Learn strong verbs for your writing.</p>
+        <a href="https://planomy.github.io/Power-Verbs/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="Scribble Starter Screenshot">
+      <div class="project-card-content">
+        <h3>Scribble Starter</h3>
+        <p>Quick prompts to get writing immediately.</p>
+        <a href="https://planomy.github.io/Scribble-Starter/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="The Power Writer Screenshot">
+      <div class="project-card-content">
+        <h3>The Power Writer</h3>
+        <p>Boost your writing efficiency and style.</p>
+        <a href="https://planomy.github.io/The-Power-Writer/" target="_blank">Visit</a>
+      </div>
+    </div>
+    <div class="project-card">
+      <img alt="The Sigma Story Writer Pro Screenshot">
+      <div class="project-card-content">
+        <h3>The Sigma Story Writer Pro</h3>
+        <p>Advanced story-building for creative writers.</p>
+        <a href="https://planomy.github.io/The-Sigma-Story-Writer-Pro/" target="_blank">Visit</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+
+<footer>
+  &copy; 2025 Scribbler Pro · Made by Nic Comico
+</footer>
+
+</body>
+</html>
